@@ -10,7 +10,6 @@ var pixel = fs.readFileSync(__dirname + '/p.gif');
 
 function start(dir, flushInterval) {
   var flushTimeout = null;
-  var stop = false;
   var counters = {
     // key: int
   };
@@ -29,9 +28,7 @@ function start(dir, flushInterval) {
       var v = counters[key];
       fs.writeFile(path.join(dir, 'data_' + key), v + '');
     });
-    if (!stop) {
-      flushTimeout = setTimeout(flush, flushInterval);
-    }
+    flushTimeout = setTimeout(flush, flushInterval);
   }
 
   function increment(key) {
@@ -45,14 +42,6 @@ function start(dir, flushInterval) {
   function notfound(res) {
     var reason = 'not found';
     res.writeHead(404, {
-      'Content-Type': 'text/html',
-      'Content-Length': reason.length
-    });
-    res.end(reason);
-  }
-
-  function error(reason, res) {
-    res.writeHead(500, {
       'Content-Type': 'text/html',
       'Content-Length': reason.length
     });
