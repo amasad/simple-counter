@@ -65,7 +65,7 @@ function start(dir, flushInterval) {
       });
       res.end(pixel);
     } else {
-      res.writeHead(200, {
+      res.writeHead(204, {
         'Content-Type': 'text/html',
         'Content-Length': '0'
       });
