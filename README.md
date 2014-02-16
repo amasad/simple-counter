@@ -3,6 +3,8 @@ simple-counter
 
 dead simple stats counter that flushes to disk.
 
+![p](http://ec2-23-20-249-34.compute-1.amazonaws.com:8888/key/simple-counter)
+
 ## install
 
 ### api
