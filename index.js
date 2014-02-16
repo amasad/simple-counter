@@ -112,7 +112,7 @@ function start(dir, flushInterval) {
     } else if (parts[1] === 'report') {
       report(pathname, res);
     } else {
-      noutfound(res);
+      notfound(res);
     }
   });
 
