@@ -1,6 +1,6 @@
 {
   "name": "simple-counter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "dead simple stats counter that flushes to disk",
   "main": "index.js",
   "scripts": {
