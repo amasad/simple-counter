@@ -1,6 +1,6 @@
 {
   "name": "simple-counter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "dead simple stats counter that flushes to disk",
   "main": "index.js",
   "scripts": {
@@ -13,5 +13,8 @@
   "devDependencies": {
     "rimraf": "~2.2.6",
     "tap": "~0.4.8"
-  }
+  },
+  "bin": {
+     "simple-counter": "./bin/simple-counter"
+   }
 }
