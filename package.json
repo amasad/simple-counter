@@ -1,0 +1,17 @@
+{
+  "name": "simple-counter",
+  "version": "0.0.1",
+  "description": "dead simple stats counter that flushes to disk",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test.js",
+    "start": "./bin/simple-counter"
+  },
+  "repository": "",
+  "author": "",
+  "license": "BSD",
+  "devDependencies": {
+    "rimraf": "~2.2.6",
+    "tap": "~0.4.8"
+  }
+}

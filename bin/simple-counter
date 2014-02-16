@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+
+var args = {},
+    argv = process.argv.slice(2);
+
+// Guess arguments.
+for (var i = 0; i < argv.length; i++){
+  var arg = argv[i];
+  if (arg.match(/^\d+$/)){
+    args.port = arg;
+  } else {
+    args.dir = arg;
+  }
+}
+
+args.port = args.port || 8888;
+
+var sc = require('../');
+
+var s = sc(args.dir);
+s.listen(args.port, function () {
+  console.log('listening on port', args.port);
+});
