@@ -5,13 +5,13 @@ dead simple stats counter that flushes to disk.
 
 ## install
 
-api:
+### api
 
 ```
 $ npm install simple-counter
 ```
 
-bin:
+### bin
 
 ```
 npm install -g simple-counter
@@ -19,7 +19,7 @@ npm install -g simple-counter
 
 ## usage
 
-api:
+### api
 
 ```js
 var sc = require('simple-counter');
@@ -28,13 +28,34 @@ var server = sc('/my/dir');
 server.listen(port);
 ```
 
-bin:
+### bin
 
 ```
 $ simple-counter /my/dir 8080
 ```
 
 pass port and dir in any order and defaults to 8888 and {module_dir}/data.
+
+### http api
+
+```
+GET /count/{key}
+```
+
+increments `{key}`
+
+```
+GET /count/{key}.gif
+```
+
+returns a one pixel transparent gif and increments {key}.
+
+```
+GET /report/{key}
+```
+
+returns {key} count
+
 
 ## License
 
