@@ -1,0 +1,4 @@
+{
+  "testRegex": "unit_tests.js",
+  "testEnvironment": "node"
+}
